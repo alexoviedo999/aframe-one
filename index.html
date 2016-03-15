@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! • A-Frame</title>
+    <meta name="description" content="Hello, World! • A-Frame">
+    <script src="https://aframe.io/releases/0.1.2/aframe.min.js"></script>
+      <script src="./src/gifsparser.js"></script>
+      <script src="./src/gifsSrc.js"></script>
+      </script>
+  </head>
+  <body>
+
+    <a-assets>
+     <canvas id="cnv" width="2" height="2"></canvas>
+     <img id="tunnel" src="./images/seesaw-3d-cube.gif">
+
+    </a-assets>
+
+
+<a-scene>
+<!-- Hang On -->
+
+
+<!-- <a-entity id="sbutton" geometry="primitive: plane; height: 0.52; width: 2" position="3.4 -1.8 -4.9" material="shader: flat; src: url(images/start-button.png)"></a-entity> -->
+
+<!-- Tunnels -->
+
+ <!-- <a-entity position="0 0 -600" rotation="0 45 0" geometry="primitive: box; width: 400; depth:400; height: 400" gifsSrc="canvas: #cnv; src: https://media.giphy.com/media/dlwB35ZltpqXC/giphy.gif"></a-entity> -->
+
+  <!-- <a-entity position="0 200 -600" rotation="0 45 0" geometry="primitive: box; width: 400; depth:400; height: 400" ></a-entity> -->
+
+<a-entity>
+
+          <!-- <a-entity position="0 0 -600" rotation="0 45 0" geometry="primitive: plane; width: 400; height: 400" gifsSrc="canvas: #cnv; src: https://media.giphy.com/media/dlwB35ZltpqXC/giphy.gif"></a-entity> -->
+
+      <!-- <a-plane position="0 10 -50" width="10" height="10" rotation="-90 0 0" src="images/matrix.jpg"></a-plane> -->
+</a-entity>
+
+
+ <a-entity>
+  <!-- <a-animation attribute="position" from="0 0 -10" to="0 0 10" dur="2000" easing="linear"></a-animation> -->
+
+
+
+  <a-entity position="0 0 -2750" rotation="0 0 0" geometry="primitive: box; width: 100; height: 100; depth: 100" gifsSrc="canvas: #cnv; src: ./images/seesaw-3d-cube.gif">
+    <a-animation attribute="rotation"
+               to="-90 -90 -90"
+               dur="5000"
+               fill="forwards"
+               repeat="indefinite"></a-animation>
+  </a-entity>
+
+
+  <a-entity id="hallway" scale="2 2 5">
+
+    <a-image position="0 5 0" rotation="90 0 0"  width="10" height="1000" src="./images/circle-vortex.gif"></a-image>
+
+    <a-image position="0 -5 0" rotation="-90 0 0"  width="10" height="1000"  src="./images/gold-waves.gif"></a-image>
+
+    <a-image position="5 0 0" rotation="0 -90 90"  width="10" height="1000"  src="./images/rainbow-square-tunnel.gif"></a-image>
+
+    <a-image position="-5 0 0" rotation="0 90 90"  width="10" height="1000"  src="./images/rainbow-discoball.gif"></a-image>
+
+  </a-entity>
+
+</a-entity>
+
+ <!-- <a-entity position="0 0 -200" geometry="primitive: cylinder; height: 250; radius: 20: radius-top: 20; radius-bottom: 25; open-ended: true" rotation="-90 0 0" gifsSrc="canvas: #cnv; src: images/i.gif"></a-entity> -->
+
+ <!-- <a-entity position="0 0 -200" geometry="primitive: sphere; radius:5" gifsSrc="canvas: #cnv; src: images/i.gif"></a-entity> -->
+
+ <!-- <a-cylinder position="0 0 -200" gifsSrc="canvas: #cnv; src: images/i.gif"></a-cylinder> -->
+
+
+<!-- <a-entity geometry="primitive: cylinder; height: 250; radius: 20: radius-top: 20; radius-bottom: 25; open-ended: true" position="0 0 -200" rotation="-90 0 0" material="shader: flat; side: double; src: url(images/trippy.jpg); repeat: 1 1" ></a-entity> -->
+
+
+
+
+<!-- <a-entity geometry="primitive: cylinder; height: 250; radius: 20: radius-top: 20; radius-bottom: 25; open-ended: true" position="200 0 -200" rotation="-90 -45 0" material="shader: flat; side: double; src: url(images/tron-ground.png); repeat: 1 1"></a-entity>
+<a-entity geometry="primitive: cylinder; height: 250; radius: 20: radius-top: 20; radius-bottom: 25; open-ended: true" position="-200 0 -200" rotation="-90 45 0" material="shader: flat; side: double; src: url(images/tron-world.jpg); repeat: 1 1"></a-entity> -->
+
+
+
+<!-- <a-entity geometry="primitive: cylinder; height: 2500; radius: 20: radius-top: 20; radius-bottom: 25; open-ended: true" position="0 0 -1250" rotation="-90 0 0" material="shader: flat; side: double; src: url(images/tron-ground.png); repeat: 1 1"></a-entity> -->
+<!-- <a-entity geometry="primitive: plane; height: 50; width: 50" position="0 0 -499" material="shader: flat; side: double; src: url(images/blue-end2.png)"></a-entity>
+<a-entity geometry="primitive: cylinder; height: 1000; radius: 20; open-ended: true" position="0 0 -1000" rotation="-90 0 0" material="shader: flat; side: double; transparent: true; src: url(images/purp.jpg); repeat: 1 5"></a-entity>
+<a-entity geometry="primitive: plane; height: 50; width: 50" position="0 0 -1500" material="shader: flat; transparent: true; side: double; src: url(images/purp-end.png)"></a-entity>
+<a-entity geometry="primitive: cylinder; height: 1000; radius: 20; open-ended: true" position="0 0 -2000" rotation="-90 0 0" material="shader: flat; side: double; transparent: true; src: url(images/tri.jpg); repeat: 1 5"></a-entity>
+<a-entity geometry="primitive: plane; height: 50; width: 50" position="0 0 -2500" material="shader: flat; transparent: true; side: double; src: url(images/white-end.png)"></a-entity>
+<a-entity geometry="primitive: cylinder; height: 2000; radius: 20; open-ended: true" position="0 0 -3500" rotation="-90 0 0" material="shader: flat; side: double; transparent: true; src: url(images/blue-line.png); repeat: 1 40"></a-entity>
+<a-entity geometry="primitive: cylinder; height: 1000; radius: 20; open-ended: true" position="0 0 -5000" rotation="-90 0 0" material="shader: flat; side: double; transparent: true; src: url(images/tron-ground.png); repeat: 1 10"></a-entity>
+<a-entity geometry="primitive: plane; height: 50; width: 50" position="0 0 -5500" material="shader: flat; transparent: true; side: double; src: url(images/blue-end.png)"></a-entity>
+<a-entity geometry="primitive: cylinder; height: 1000; radius: 20; open-ended: true" position="0 0 -6000" rotation="-90 0 0" material="shader: flat; side: double; transparent: true; src: url(images/matrix.jpg); repeat: 1 5"></a-entity>
+<a-entity geometry="primitive: plane; height: 50; width: 50" position="0 0 -6500" material="shader: flat; transparent: true; side: double; src: url(images/green-end.png)"></a-entity>
+<a-entity geometry="primitive: cylinder; height: 1000; radius: 20; open-ended: true" position="0 0 -7000" rotation="-90 0 0" material="shader: flat; side: double; transparent: true; src: url(images/strings.jpg); repeat: 1 1"></a-entity>
+<a-entity geometry="primitive: plane; height: 50; width: 50" position="0 0 -7500" rotation="0 0.3 0" material="shader: flat; transparent: true; side: double; src: url(images/the-end.jpg)"></a-entity> -->
+
+<!-- Camera -->
+<a-entity position="0 0 0" camera look-controls="enabled: true" cursor-visible="enabled: false" wasd-controls="enabled: false; acceleration: 1000">
+ <a-animation id="ride" attribute="position" from="0 0 0" to="0 2 -2600" repeat="0" ease="linear" begin="" dur="10000"></a-animation>
+  <a-entity id="cursor" cursor="fuse: true;  maxDistance: 10; timeout: 100" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: red" opacity="0.5" position="0 0 -2">
+   <a-animation begin="" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="500"></a-animation>
+   <a-animation begin="" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="3000"></a-animation>
+  </a-entity>
+ </a-entity>
+
+     <!-- Lighting and background -->
+     <a-sky src="images/tron-world.jpg" radius="10000"></a-sky>
+
+
+     <!-- <a-sky color="#000" radius="10000"></a-sky> -->
+
+   </a-scene>
+
+
+  </body>
+</html>
